@@ -22,26 +22,20 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   text-align: center;
   position: relative;
+  padding: 16px;
 }
 
-/* ===== SMOOTH ENTRY (3s) ===== */
+/* ===== ENTRY ANIMATION ===== */
 .fade-entry {
   animation: fadeSlideIn 3s ease forwards;
 }
-
 @keyframes fadeSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* YOUTUBE */
@@ -54,12 +48,9 @@ html, body {
   gap: 8px;
   text-decoration: none;
 }
-.youtube-link:hover {
-  transform: scale(1.08);
-}
 .youtube-avatar {
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid #22c55e;
@@ -72,56 +63,49 @@ html, body {
 .youtube-name {
   color: #22c55e;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* BADGES */
-.badges {
-  margin-bottom: 20px;
-}
+.badges { margin-bottom: 16px; }
 .badge {
   background: #052e16;
   color: #22c55e;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: 999px;
-  font-size: 12px;
-  margin-right: 6px;
+  font-size: 11px;
 }
 
 /* TEXT */
 h1 {
-  font-size: clamp(28px, 6vw, 46px);
+  font-size: clamp(24px, 6vw, 46px);
   font-weight: 800;
-  margin: 0 0 10px;
-}
-h1 span {
-  color: #22c55e;
 }
 p {
-  max-width: 720px;
-  margin: 0 auto 36px;
+  max-width: 680px;
   color: #9ca3af;
-  font-size: clamp(14px, 3.5vw, 16px);
+  font-size: clamp(14px, 4vw, 16px);
+  margin-bottom: 28px;
 }
 
 /* SCRIPT BOX */
 .script-box {
+  width: 100%;
   max-width: 760px;
   background: #111;
   border: 1px solid #0f172a;
   border-radius: 16px;
-  padding: 16px;
-  text-align: left;
+  padding: 14px;
 }
 
 .script-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 10px;
   flex-wrap: wrap;
-  gap: 8px;
 }
+
 .script-title {
   font-size: 14px;
   font-weight: 600;
@@ -131,61 +115,58 @@ p {
   background: #22c55e;
   color: #022c22;
   border: none;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
-  font-size: 14px;
-}
-#copyBtn:active {
-  transform: scale(0.95);
+  width: 100%;
 }
 
 .script-scroll {
-  overflow-x: auto;
+  margin-top: 12px;
 }
+
 pre#scriptText {
   margin: 0;
   background: #000;
   color: #e5e7eb;
-  padding: 18px;
+  padding: 14px;
   border-radius: 12px;
-  font-size: 14px;
-  white-space: pre;
-  min-width: 700px;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 #copiedText {
-  margin-top: 12px;
+  margin-top: 10px;
   color: #22c55e;
   font-size: 14px;
-  font-weight: 600;
   display: none;
 }
 
 /* STATS */
 .stats {
-  margin-top: 36px;
+  margin-top: 28px;
   display: flex;
-  justify-content: center;
-  gap: 24px;
+  gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .stat {
   background: #111;
   border: 1px solid #0f172a;
   border-radius: 14px;
-  padding: 18px 26px;
-  min-width: 180px;
+  padding: 16px;
+  min-width: 140px;
 }
 .stat-value {
   color: #22c55e;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 800;
 }
 .stat-label {
   color: #9ca3af;
-  font-size: 13px;
+  font-size: 12px;
 }
 </style>
 </head>
@@ -205,13 +186,13 @@ pre#scriptText {
     <span class="badge">All Executors Supported</span>
   </div>
 
-  <h1>A Script That Does <span>More</span> With Less</h1>
+  <h1>A Script That Does <span style="color:#22c55e">More</span> With Less</h1>
   <p>A modern and lightweight MM2 script built for speed, stability, and smooth gameplay.</p>
 
   <div class="script-box">
     <div class="script-header">
       <span class="script-title">🔪 MM2 Script</span>
-      <button id="copyBtn">Copy</button>
+      <button id="copyBtn">Copy Script</button>
     </div>
 
     <div class="script-scroll">
@@ -219,16 +200,16 @@ pre#scriptText {
     </div>
   </div>
 
-  <div id="copiedText">✓ Script copied to clipboard</div>
+  <div id="copiedText">✓ Script copied</div>
 
   <div class="stats">
     <div class="stat">
-      <div class="stat-value">1,000,000+</div>
-      <div class="stat-label">Total Executions</div>
+      <div class="stat-value">1M+</div>
+      <div class="stat-label">Executions</div>
     </div>
     <div class="stat">
       <div class="stat-value">900+</div>
-      <div class="stat-label">Active Users</div>
+      <div class="stat-label">Users</div>
     </div>
   </div>
 
@@ -239,40 +220,19 @@ const copyBtn = document.getElementById("copyBtn");
 const copiedText = document.getElementById("copiedText");
 const scriptEl = document.getElementById("scriptText");
 
-copyBtn.addEventListener("click", () => {
-  const text = scriptEl.textContent;
+copyBtn.onclick = () => {
+  navigator.clipboard.writeText(scriptEl.textContent).then(() => {
+    copiedText.style.display = "block";
+    copyBtn.textContent = "Copied ✓";
+    setTimeout(() => {
+      copiedText.style.display = "none";
+      copyBtn.textContent = "Copy Script";
+    }, 2000);
+  });
+};
 
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(text).then(showCopied);
-  } else {
-    const textarea = document.createElement("textarea");
-    textarea.value = text;
-    textarea.style.position = "fixed";
-    textarea.style.opacity = "0";
-    document.body.appendChild(textarea);
-    textarea.focus();
-    textarea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textarea);
-    showCopied();
-  }
-});
-
-function showCopied() {
-  copiedText.style.display = "block";
-  copyBtn.textContent = "Copied ✓";
-  setTimeout(() => {
-    copiedText.style.display = "none";
-    copyBtn.textContent = "Copy";
-  }, 2000);
-}
-
-/* REMOVE ENTRY ANIMATION AFTER 3s */
 setTimeout(() => {
-  const container = document.querySelector(".container");
-  if (container) {
-    container.classList.remove("fade-entry");
-  }
+  document.querySelector(".container")?.classList.remove("fade-entry");
 }, 3000);
 </script>
 
