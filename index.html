@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CamScripter Hub</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: Inter, Arial, sans-serif;
+  color: #e5e7eb;
+}
+
+body {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+@keyframes fadeIn { to { opacity: 1; } }
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 16px;
+}
+
+h1 {
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 900;
+}
+h1 span { color: #22c55e; }
+
+p {
+  max-width: 600px;
+  color: #9ca3af;
+  margin: 12px 0 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #0f172a;
+  border-radius: 18px;
+  padding: 28px 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.mm2 { border-color: #22c55e; }
+.adopt { border-color: #ec4899; }
+.ps99 { border-color: #3b82f6; }
+
+.card h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+.card p {
+  font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Cam<span>Scripter</span> Hub</h1>
+<p>Select your game and copy the script instantly.</p>
+
+<div class="cards">
+  <a class="card mm2" href="mm2.html">
+    <h2>🔪 MM2</h2>
+    <p>Fast & lightweight Murder Mystery 2 script</p>
+  </a>
+
+  <a class="card adopt" href="adoptme.html">
+    <h2>🐶 Adopt Me</h2>
+    <p>Safe farming & trading script</p>
+  </a>
+
+  <a class="card ps99" href="ps99.html">
+    <h2>🐾 PS99</h2>
+    <p>Optimized Pet Simulator 99 grinding script</p>
+  </a>
+</div>
+
+</div>
+</body>
+</html>
