@@ -10,81 +10,156 @@ body{
 margin:0;
 background:#000;
 font-family:Inter,Arial;
-color:#fff;
-display:flex;
-flex-direction:column;
-align-items:center;
-min-height:100vh;
+color:#e5e7eb;
+opacity:0;
+animation:fade 1.8s forwards
 }
-
-body{opacity:0;animation:fade 2s forwards}
 @keyframes fade{to{opacity:1}}
 
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+text-align:center
+}
+
+/* HEADER */
 .header{
-margin-top:40px;
 display:flex;
+justify-content:center;
 align-items:center;
 gap:14px;
+margin-bottom:30px
 }
 .header img{
-width:70px;height:70px;border-radius:50%;
+width:70px;
+height:70px;
+border-radius:50%;
 border:3px solid #22c55e;
+cursor:pointer;
+transition:.2s
 }
-.header h1{margin:0}
+.header img:hover{
+transform:scale(1.08)
+}
+.header h1{
+margin:0;
+font-size:28px
+}
+.header span{
+color:#22c55e
+}
 
+/* SUBTEXT */
+.sub{
+color:#9ca3af;
+max-width:700px;
+margin:10px auto 40px;
+font-size:15px
+}
+
+/* CARDS */
 .cards{
-margin-top:60px;
-display:flex;
-gap:24px;
-flex-wrap:wrap;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px
 }
 
 .card{
-width:260px;
-padding:24px;
-border-radius:20px;
 background:#111;
-text-align:center;
-text-decoration:none;
-color:white;
 border:1px solid #1f2937;
-transition:.2s;
+border-radius:18px;
+padding:26px;
+text-align:left;
+transition:.25s;
+cursor:pointer
 }
-.card:hover{transform:scale(1.05)}
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,.6)
+}
 
-.mm2{border-color:#22c55e}
-.adopt{border-color:#ec4899}
-.ps99{border-color:#3b82f6}
+.card h2{
+margin:0 0 10px;
+font-size:20px
+}
+.card p{
+color:#9ca3af;
+font-size:14px;
+margin-bottom:18px
+}
 
-.card h2{margin:10px 0}
-.card p{color:#9ca3af;font-size:14px}
+.btn{
+display:inline-block;
+padding:12px 18px;
+border-radius:12px;
+font-weight:800;
+text-decoration:none;
+color:#000
+}
+
+/* COLORS */
+.mm2 h2 span{color:#22c55e}
+.mm2 .btn{background:#22c55e}
+
+.adopt h2 span{color:#ec4899}
+.adopt .btn{background:#ec4899}
+
+.ps99 h2 span{color:#3b82f6}
+.ps99 .btn{background:#3b82f6}
+
+/* FOOTER */
+.footer{
+margin-top:50px;
+color:#6b7280;
+font-size:13px
+}
 </style>
 </head>
 
 <body>
+<div class="container">
 
+<!-- HEADER -->
 <div class="header">
+<a href="https://www.youtube.com/channel/UCEoYs6dYZCF2cc1sQF63i1g" target="_blank">
 <img src="https://yt3.googleusercontent.com/qey-alATC2cBWoXPL3BkWuRyPcwJUz0lHfRufP0Dw8SuxlFtt0_N0-n6n1FpsbJjEq5rpNB-=s160-c-k-c0x00ffffff-no-rj">
-<h1>CamScripter Hub</h1>
+</a>
+<h1>Cam<span>Scripter</span> Hub</h1>
 </div>
 
+<p class="sub">
+High-quality Roblox scripts built for performance, stability and clean UI.
+Choose your game and start scripting instantly.
+</p>
+
+<!-- CARDS -->
 <div class="cards">
-<a class="card mm2" href="mm2.html">
-<h2>MM2</h2>
-<p>Murder Mystery 2 Script</p>
-</a>
 
-<a class="card adopt" href="adopt.html">
-<h2>Adopt Me</h2>
-<p>Adopt Me Best Script</p>
-</a>
-
-<a class="card ps99" href="ps99.html">
-<h2>Pet Simulator 99</h2>
-<p>PS99 Powerful Script</p>
-</a>
+<div class="card mm2" onclick="location.href='mm2.html'">
+<h2>🔪 Murder Mystery 2 <span>(MM2)</span></h2>
+<p>Fast, lightweight and undetected MM2 script with smooth execution.</p>
+<a class="btn">Open Script</a>
 </div>
 
+<div class="card adopt" onclick="location.href='adoptme.html'">
+<h2>🐶 Adopt Me <span>Script</span></h2>
+<p>Auto farm, trades and optimized features for Adopt Me.</p>
+<a class="btn">Open Script</a>
+</div>
+
+<div class="card ps99" onclick="location.href='ps99.html'">
+<h2>🐾 Pet Simulator 99 <span>(PS99)</span></h2>
+<p>Powerful automation and farming tools for PS99.</p>
+<a class="btn">Open Script</a>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 CamScripter • All scripts are keyless & executor friendly
+</div>
+
+</div>
 </body>
 </html>
