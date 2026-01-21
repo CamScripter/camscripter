@@ -11,7 +11,7 @@ html, body {
   padding: 0;
   background: #000;
   font-family: Inter, Arial, sans-serif;
-  color: #e5e7eb;
+  color: #e0f2fe;
 }
 
 body {
@@ -19,6 +19,20 @@ body {
   animation: fadeIn 3s ease forwards;
 }
 @keyframes fadeIn { to { opacity: 1; } }
+
+.back-btn {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background: #111;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 20;
+}
 
 .container {
   min-height: 100vh;
@@ -30,7 +44,7 @@ body {
 }
 
 .badge {
-  background: #0a1e3b;
+  background: #0b1d3a;
   color: #3b82f6;
   padding: 6px 14px;
   border-radius: 999px;
@@ -38,15 +52,12 @@ body {
   margin-bottom: 18px;
 }
 
-h1 {
-  font-size: clamp(26px, 6vw, 46px);
-  font-weight: 800;
-}
+h1 { font-size: clamp(26px, 6vw, 46px); font-weight: 800; }
 h1 span { color: #3b82f6; }
 
 p {
   max-width: 700px;
-  color: #9ca3af;
+  color: #93c5fd;
   margin-bottom: 26px;
 }
 
@@ -54,7 +65,7 @@ p {
   width: 100%;
   max-width: 760px;
   background: #111;
-  border: 1px solid #0a1e3b;
+  border: 1px solid #0b1d3a;
   border-radius: 16px;
   padding: 16px;
 }
@@ -62,7 +73,7 @@ p {
 #copyBtn {
   width: 100%;
   background: #3b82f6;
-  color: #001b3a;
+  color: #000;
   border: none;
   padding: 14px;
   border-radius: 12px;
@@ -92,32 +103,28 @@ pre {
 }
 .stat {
   background: #111;
-  border: 1px solid #0a1e3b;
+  border: 1px solid #0b1d3a;
   border-radius: 14px;
   padding: 16px 22px;
   min-width: 140px;
 }
-.stat-value {
-  color: #3b82f6;
-  font-size: 24px;
-  font-weight: 800;
-}
-.stat-label {
-  color: #9ca3af;
-}
+.stat-value { color: #3b82f6; font-size: 24px; font-weight: 800; }
+.stat-label { color: #93c5fd; }
 </style>
 </head>
 
 <body>
-<div class="container">
 
+<a href="index.html" class="back-btn">← Hub</a>
+
+<div class="container">
 <div class="badge">● Online • Keyless • PS99</div>
 
 <h1>Pet Simulator 99 <span>Script</span></h1>
-<p>Optimized PS99 script for fast grinding, pets and diamonds.</p>
+<p>Optimized PS99 script for grinding and farming.</p>
 
 <div class="script-box">
-  <button id="copyBtn">Copy Script</button>
+<button id="copyBtn">Copy Script</button>
 <pre id="scriptText">loadstring(game:HttpGet("https://raw.githubusercontent.com/CamScripter/BananaHub0/refs/heads/main/PetSimulator99V2"))()</pre>
 </div>
 
@@ -133,14 +140,12 @@ pre {
     <div class="stat-label">Users</div>
   </div>
 </div>
-
 </div>
 
 <script>
 const btn=document.getElementById("copyBtn");
 const txt=document.getElementById("scriptText");
 const copied=document.getElementById("copied");
-
 btn.onclick=()=>{
 navigator.clipboard.writeText(txt.textContent).then(()=>{
 btn.textContent="Copied ✓";
@@ -152,5 +157,6 @@ copied.style.display="none";
 });
 };
 </script>
+
 </body>
 </html>
