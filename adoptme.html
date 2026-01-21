@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adopt Me Script | CamScripter</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: Inter, Arial, sans-serif;
+  color: #e5e7eb;
+}
+
+body {
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+}
+@keyframes fadeIn { to { opacity: 1; } }
+
+.container {
+  min-height: 100vh;
+  padding: 90px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.youtube-link {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+}
+.youtube-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ec4899;
+}
+.youtube-name {
+  color: #ec4899;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.badge {
+  background: #3b0a24;
+  color: #ec4899;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(26px, 6vw, 46px);
+  font-weight: 800;
+}
+h1 span { color: #ec4899; }
+
+p {
+  max-width: 700px;
+  color: #9ca3af;
+  margin-bottom: 26px;
+}
+
+.script-box {
+  width: 100%;
+  max-width: 760px;
+  background: #111;
+  border: 1px solid #1f0a14;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.script-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#copyBtn {
+  width: 100%;
+  background: #ec4899;
+  color: #300017;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+pre {
+  background: #000;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  min-width: 520px;
+  white-space: pre;
+}
+
+#copied {
+  margin-top: 10px;
+  color: #ec4899;
+  font-weight: 600;
+  display: none;
+}
+
+.stats {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+.stat {
+  background: #111;
+  border: 1px solid #1f0a14;
+  border-radius: 14px;
+  padding: 16px 22px;
+  min-width: 140px;
+}
+.stat-value {
+  color: #ec4899;
+  font-size: 24px;
+  font-weight: 800;
+}
+.stat-label {
+  color: #9ca3af;
+}
+
+@media (min-width: 768px) {
+  .script-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #copyBtn { width: auto; padding: 10px 18px; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="badge">● Online • Keyless • Adopt Me</div>
+
+<h1>Adopt Me <span>Script</span></h1>
+<p>Fast, safe and smooth Adopt Me script designed for farming and trading.</p>
+
+<div class="script-box">
+  <div class="script-header">
+    <span>🐶 Adopt Me Script</span>
+    <button id="copyBtn">Copy Script</button>
+  </div>
+
+<pre id="scriptText">loadstring(game:HttpGet("https://raw.githubusercontent.com/CamScripter/CamHub/refs/heads/main/AdoptMe"))()</pre>
+</div>
+
+<div id="copied">✓ Script copied</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-value">10K+</div>
+    <div class="stat-label">Executions</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">100+</div>
+    <div class="stat-label">Users</div>
+  </div>
+</div>
+
+</div>
+
+<script>
+const btn=document.getElementById("copyBtn");
+const txt=document.getElementById("scriptText");
+const copied=document.getElementById("copied");
+
+btn.onclick=()=>{
+navigator.clipboard.writeText(txt.textContent).then(()=>{
+btn.textContent="Copied ✓";
+copied.style.display="block";
+setTimeout(()=>{
+btn.textContent="Copy Script";
+copied.style.display="none";
+},2000);
+});
+};
+</script>
+</body>
+</html>
