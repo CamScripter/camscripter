@@ -54,8 +54,19 @@ padding:16px;
 margin-top:20px
 }
 
+/* SAĞ-SOL SCROLL */
 .script-scroll{
-overflow-x:auto
+overflow-x:auto;
+overflow-y:hidden;
+}
+
+/* SCROLLBAR */
+.script-scroll::-webkit-scrollbar{
+height:8px
+}
+.script-scroll::-webkit-scrollbar-thumb{
+background:#3b82f6;
+border-radius:10px
 }
 
 pre{
@@ -64,7 +75,8 @@ padding:16px;
 border-radius:12px;
 min-width:520px;
 white-space:pre;
-color:#3b82f6
+color:#3b82f6;
+margin:0
 }
 
 button{
@@ -75,6 +87,13 @@ padding:14px 20px;
 border-radius:12px;
 font-weight:800;
 cursor:pointer
+}
+
+#copied{
+margin-top:10px;
+color:#3b82f6;
+font-weight:700;
+display:none
 }
 
 .stats{
@@ -105,26 +124,38 @@ border:1px solid #1f2937
 <h2>CamScripter</h2>
 </div>
 
-<h1>Pet Simulator <span>99</span></h1>
-<p>Strong, smooth and optimized PS99 script.</p>
+<h1>Pet Simulator 99 <span>Script</span></h1>
+<p>Optimized, fast and stable PS99 automation.</p>
 
 <div class="script-box">
-<div class="script-scroll">
-<pre id="script">loadstring(game:HttpGet("https://raw.githubusercontent.com/CamScripter/BananaHub0/refs/heads/main/PetSimulator99V2"))()</pre>
-</div>
-<button onclick="copy()">Copy Script</button>
+  <div class="script-scroll">
+    <pre id="script">loadstring(game:HttpGet("https://raw.githubusercontent.com/CamScripter/BananaHub0/refs/heads/main/PetSimulator99V2"))()</pre>
+  </div>
+  <button onclick="copyScript()">Copy Script</button>
+  <div id="copied">✓ Copied</div>
 </div>
 
 <div class="stats">
-<div class="stat"><div class="stat-value">10K+</div><div class="stat-label">Executions</div></div>
-<div class="stat"><div class="stat-value">100+</div><div class="stat-label">Users</div></div>
+  <div class="stat">
+    <div class="stat-value">10K+</div>
+    <div class="stat-label">Executions</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">100+</div>
+    <div class="stat-label">Users</div>
+  </div>
 </div>
 
 </div>
 
 <script>
-function copy(){
-navigator.clipboard.writeText(document.getElementById("script").innerText)
+function copyScript(){
+  navigator.clipboard.writeText(
+    document.getElementById("script").innerText
+  );
+  const c = document.getElementById("copied");
+  c.style.display="block";
+  setTimeout(()=>{c.style.display="none"},2000);
 }
 </script>
 </body>
