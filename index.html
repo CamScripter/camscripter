@@ -36,13 +36,13 @@ body{
   width:72px;
   height:72px;
   border-radius:50%;
-  border:3px solid #ef4444; /* 🔴 KIRMIZI YUVARLAK */
+  border:3px solid #ef4444; /* 🔴 KIRMIZI PROFİL ÇEMBERİ */
   cursor:pointer;
   transition:.3s
 }
 .header img:hover{transform:scale(1.08)}
 
-h1 span{color:#ef4444}
+h1 span{color:#ef4444} /* 🔴 SCRIPTER KIRMIZI */
 
 /* SUBTEXT */
 .subtitle{
@@ -117,4 +117,105 @@ h1 span{color:#ef4444}
   flex-wrap:wrap
 }
 .stat{
-  background:#0b0b0b
+  background:#0b0b0b;
+  padding:20px 28px;
+  border-radius:18px;
+  border:1px solid #1f2937;
+  min-width:150px
+}
+.stat-value{
+  font-size:28px;
+  font-weight:900;
+  color:#ef4444; /* 🔴 STATS KIRMIZI */
+}
+.stat-label{
+  font-size:13px;
+  color:#9ca3af
+}
+
+/* FOOTER */
+.footer{
+  margin-top:70px;
+  font-size:13px;
+  color:#6b7280
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="header">
+  <a href="https://www.youtube.com/@CamScripter" target="_blank">
+    <img src="https://yt3.googleusercontent.com/qey-alATC2cBWoXPL3BkWuRyPcwJUz0lHfRufP0Dw8SuxlFtt0_N0-n6n1FpsbJjEq5rpNB-=s160-c-k-c0x00ffffff-no-rj">
+  </a>
+  <h1>Cam<span>Scripter</span> Hub</h1>
+</div>
+
+<div class="subtitle">
+Premium Roblox scripts built for performance, safety and clean UI.<br>
+No skids. No junk. Just real hub quality.
+</div>
+
+<div class="cards">
+
+  <div class="card mm2" onclick="location.href='mm2.html'">
+    <h2>🔪 Murder Mystery 2</h2>
+    <p>
+      High-performance MM2 automation with smooth execution.<br>
+      Designed for fast farming, stable gameplay and zero lag.
+    </p>
+    <span class="tag">MM2 • Stable • Fast</span>
+  </div>
+
+  <div class="card adopt" onclick="location.href='adoptme.html'">
+    <h2>🐶 Adopt Me</h2>
+    <p>
+      Clean and safe farming tools for Adopt Me.<br>
+      Perfect for grinding bucks, pets and tasks effortlessly.
+    </p>
+    <span class="tag">Adopt Me • Safe • Clean UI</span>
+  </div>
+
+  <div class="card ps99" onclick="location.href='ps99.html'">
+    <h2>💎 Pet Simulator 99</h2>
+    <p>
+      Auto farming, fast progression and optimized performance.<br>
+      Built for long sessions without crashes.
+    </p>
+    <span class="tag">PS99 • Auto Farm • Smooth</span>
+  </div>
+
+  <div class="card blox" onclick="location.href='bloxfruits.html'">
+    <h2>🍊 Blox Fruits</h2>
+    <p>
+      Powerful orange-themed Blox Fruits script.<br>
+      Level faster, grind smarter and dominate the seas.
+    </p>
+    <span class="tag">Blox Fruits • OP • Orange</span>
+  </div>
+
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="stat-value">10K+</div>
+    <div class="stat-label">Total Executions</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">100+</div>
+    <div class="stat-label">Active Users</div>
+  </div>
+  <div class="stat">
+    <div class="stat-value">4</div>
+    <div class="stat-label">Games Supported</div>
+  </div>
+</div>
+
+<div class="footer">
+© 2026 CamScripter — Real Hub Experience
+</div>
+
+</div>
+</body>
+</html>
