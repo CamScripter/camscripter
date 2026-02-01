@@ -42,6 +42,7 @@ body{
   z-index:1;
 }
 
+/* HEADER */
 .header{
   display:flex;
   justify-content:center;
@@ -49,10 +50,18 @@ body{
   gap:16px;
   margin-bottom:28px;
 }
-.header img{
-  width:72px;height:72px;border-radius:50%;
-  border:3px solid #ef4444;
+.header a{
+  display:inline-flex;
 }
+.header img{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  border:3px solid #ef4444;
+  cursor:pointer;
+  transition:.3s;
+}
+.header img:hover{transform:scale(1.08)}
 h1 span{color:#ef4444}
 
 .subtitle{
@@ -62,27 +71,18 @@ h1 span{color:#ef4444}
   font-size:15px;
 }
 
-/* ===== GRID AYARI ===== */
+/* GRID */
 .cards{
   display:grid;
   gap:22px;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
-
-/* TABLET → 3 KOLON */
-@media (max-width: 900px){
-  .cards{
-    grid-template-columns:repeat(3,1fr);
-  }
+@media(max-width:900px){
+  .cards{grid-template-columns:repeat(3,1fr)}
 }
-
-/* MOBİL → 2 KOLON */
-@media (max-width: 600px){
-  .cards{
-    grid-template-columns:repeat(2,1fr);
-  }
+@media(max-width:600px){
+  .cards{grid-template-columns:repeat(2,1fr)}
 }
-/* ===================== */
 
 .card{
   background:#0b0b0b;
@@ -139,7 +139,10 @@ h1 span{color:#ef4444}
 <div class="container">
 
 <div class="header">
-  <img src="https://yt3.googleusercontent.com/qey-alATC2cBWoXPL3BkWuRyPcwJUz0lHfRufP0Dw8SuxlFtt0_N0-n6n1FpsbJjEq5rpNB-=s160-c-k-c0x00ffffff-no-rj">
+  <!-- ✅ YOUTUBE LINK -->
+  <a href="https://www.youtube.com/@CamScripterr" target="_blank">
+    <img src="https://yt3.googleusercontent.com/qey-alATC2cBWoXPL3BkWuRyPcwJUz0lHfRufP0Dw8SuxlFtt0_N0-n6n1FpsbJjEq5rpNB-=s160-c-k-c0x00ffffff-no-rj">
+  </a>
   <h1>Cam<span>Scripter</span> Hub</h1>
 </div>
 
