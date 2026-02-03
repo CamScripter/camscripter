@@ -19,7 +19,10 @@ body{
 
 #stars{
   position:fixed;
-  inset:0;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
   z-index:-1;
   background:#000;
   overflow:hidden;
@@ -30,8 +33,15 @@ body{
   background:#fff;
   animation:fall linear infinite, twinkle 2s infinite alternate;
 }
-@keyframes fall{from{transform:translateY(-10px)}to{transform:translateY(110vh)}}
-@keyframes twinkle{0%{opacity:.2}50%{opacity:.9}100%{opacity:.2}}
+@keyframes fall{
+  from{transform:translateY(-10px)}
+  to{transform:translateY(110vh)}
+}
+@keyframes twinkle{
+  0%{opacity:.2}
+  50%{opacity:.9}
+  100%{opacity:.2}
+}
 
 .container{
   max-width:1200px;
@@ -42,7 +52,6 @@ body{
   z-index:1;
 }
 
-/* HEADER */
 .header{
   display:flex;
   justify-content:center;
@@ -50,18 +59,12 @@ body{
   gap:16px;
   margin-bottom:28px;
 }
-.header a{
-  display:inline-flex;
-}
 .header img{
   width:72px;
   height:72px;
   border-radius:50%;
   border:3px solid #ef4444;
-  cursor:pointer;
-  transition:.3s;
 }
-.header img:hover{transform:scale(1.08)}
 h1 span{color:#ef4444}
 
 .subtitle{
@@ -71,38 +74,30 @@ h1 span{color:#ef4444}
   font-size:15px;
 }
 
-/* GRID */
 .cards{
   display:grid;
-  gap:22px;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
 }
-@media(max-width:900px){
-  .cards{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:600px){
-  .cards{grid-template-columns:repeat(2,1fr)}
-}
-
 .card{
   background:#0b0b0b;
   border:1px solid #1f2937;
   border-radius:20px;
-  padding:22px;
+  padding:26px;
   text-align:left;
   cursor:pointer;
   transition:.3s;
 }
 .card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-8px);
   box-shadow:0 10px 30px rgba(0,0,0,.6);
 }
-.card h2{margin:0 0 8px;font-size:20px}
-.card p{color:#9ca3af;font-size:13px}
+.card h2{margin:0 0 8px;font-size:22px}
+.card p{color:#9ca3af;font-size:14px}
 .tag{
   display:inline-block;
-  margin-top:12px;
-  font-size:11px;
+  margin-top:14px;
+  font-size:12px;
   font-weight:700;
   padding:6px 12px;
   border-radius:999px;
@@ -139,10 +134,7 @@ h1 span{color:#ef4444}
 <div class="container">
 
 <div class="header">
-  <!-- ✅ YOUTUBE LINK -->
-  <a href="https://www.youtube.com/@CamScripterr" target="_blank">
-    <img src="https://yt3.googleusercontent.com/qey-alATC2cBWoXPL3BkWuRyPcwJUz0lHfRufP0Dw8SuxlFtt0_N0-n6n1FpsbJjEq5rpNB-=s160-c-k-c0x00ffffff-no-rj">
-  </a>
+  <img src="https://yt3.googleusercontent.com/qey-alATC2cBWoXPL3BkWuRyPcwJUz0lHfRufP0Dw8SuxlFtt0_N0-n6n1FpsbJjEq5rpNB-=s160-c-k-c0x00ffffff-no-rj">
   <h1>Cam<span>Scripter</span> Hub</h1>
 </div>
 
@@ -156,31 +148,31 @@ No skids. No junk. Just real hub quality.
   <div class="card mm2" onclick="location.href='mm2.html'">
     <h2>🔪 Murder Mystery 2</h2>
     <p>High-performance MM2 automation.</p>
-    <span class="tag">MM2 • Fast</span>
+    <span class="tag">MM2 • Stable • Fast</span>
   </div>
 
   <div class="card tsunami" onclick="location.href='escape-tsunami.html'">
-    <h2>🌊 Escape Tsunami</h2>
-    <p>Fast & smooth automation.</p>
-    <span class="tag">Tsunami • Yellow</span>
+    <h2>🌊 Escape Tsunami for Brainrots</h2>
+    <p>Fast and smooth automation.</p>
+    <span class="tag">Escape Tsunami • Fast • Yellow</span>
   </div>
 
   <div class="card adopt" onclick="location.href='adoptme.html'">
     <h2>🐶 Adopt Me</h2>
-    <p>Clean farming tools.</p>
-    <span class="tag">Safe</span>
+    <p>Clean and safe farming tools.</p>
+    <span class="tag">Adopt Me • Safe</span>
   </div>
 
   <div class="card blade" onclick="location.href='bladeball.html'">
     <h2>⚔️ Blade Ball</h2>
-    <p>Reaction automation.</p>
-    <span class="tag">Precision</span>
+    <p>Reaction-based automation.</p>
+    <span class="tag">Blade Ball • Precision</span>
   </div>
 
   <div class="card blox" onclick="location.href='bloxfruits.html'">
     <h2>🐉 Blox Fruits</h2>
-    <p>OP automation.</p>
-    <span class="tag">Orange</span>
+    <p>Powerful Blox Fruits script.</p>
+    <span class="tag">Blox Fruits • OP</span>
   </div>
 
 </div>
